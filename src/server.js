@@ -13,4 +13,7 @@ mongoose.connect('mongodb+srv://amitky545:BN1GvTInzn8Sw1wk@knma.rvakz2p.mongodb.
     app.use(cors()); 
 app.use(bodyParser.json());
 app.use('/api/data', dataRoutes);
+app.use('/', (req,res)=>{
+    res.send("server is running")
+});
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
